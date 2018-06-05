@@ -3,8 +3,6 @@
 
   &--index
     margin-bottom: 2em
-    font-size: .75rem
-    padding-right: 32px
     display: grid
     grid-template-areas: "left right"
     grid-template-columns: 2fr 1fr
@@ -29,6 +27,7 @@
         grid-area: 2 / left        
         padding-bottom: 0
         padding-top: 0
+        text-align: justify
 
       &__footer
         grid-area: 3 / left
@@ -41,6 +40,25 @@
         background-position: center center
         border-radius: 2px
         box-shadow: none
+
+    +sm-down
+      #{$r}    
+        &__title, &__body, &__footer
+          padding-right: 0
+
+        &__index-image
+          grid-area: 1 / left / 1 / right
+          height: 300px
+          margin-bottom: 1em
+
+        &__title
+          grid-area: 2 / left / 2 / right
+
+        &__body
+          grid-area: 3 / left / 3 / right
+
+        &__footer
+          grid-area: 4 / left / 4 / right
 
     h1
       background: transparent

@@ -23,7 +23,6 @@
   <% if (index){ %>
     <a
       href="<%- post.path %>"
-      target="_blank"
       itemprop="url"
       class="article__index-image"
       style="background-image: url('<%= post.image %>');<% if (post.fill_color) { %> background-color: <%= post.fill_color %>;<% } %><% if (post.background_type) { %> background-size: <%= post.background_type %>;<% } %>"

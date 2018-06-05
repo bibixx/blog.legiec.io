@@ -13,10 +13,23 @@
       </div>
     </div>
     <nav class="site-header__left">
-      <!-- <a id="main-nav-toggle" class="nav-icon"></a> -->
       <% for (var i in theme.menu){ %>
         <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
       <% } %>
     </nav>
+
+    <button class="site-header__hamburger">
+      <i class="material-icons">menu</i>
+    </button>
   </div>
 </header>
+
+<nav class="mobile-menu">
+  <div class="mobile-menu__bg"></div>
+  <ul class="mobile-menu__body">
+    <li class="header"><span>legiec.io</span></li>
+    <% for (var i in theme.menu){ %>
+      <li><span><a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a></span></li>
+    <% } %>
+  </ul>
+</nav>

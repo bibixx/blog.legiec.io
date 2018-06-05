@@ -3,17 +3,33 @@
 
   &:not(&--post)
     display: grid
-    grid-template-columns: 1fr 60vw 15vw 1fr
-    grid-template-areas: "start header header end" "start main main end" "start footer footer end"
+    grid-template-columns: 1fr 75vw 1fr
+    grid-template-areas: "start header end" "start main end" "start footer end"
+
+    +md-down
+      grid-template-columns: 1fr 90vw 1fr
 
     #main
       grid-area: 2 / main
 
-    // #sidebar
-    //   grid-area: 2 / sidebar
-
     #footer
       grid-area: 3 / start / 3 / end
+
+    .site-header
+      &__hamburger
+        display: none
+        align-items: center
+        grid-area: left
+        font-size: 2rem
+        background: transparent
+        border: none
+        color: #fff
+        text-align: left
+        padding: 0
+        cursor: pointer
+
+        +sm-down
+          display: flex
 
   &--post
     .site-header__banner
@@ -28,6 +44,10 @@
       transform: translateX(-50%)
       background: none
       padding-top: 24px
+      box-shadow: none
+
+      +sm-down
+        padding-top: 8px
 
       &__menu
         display: block

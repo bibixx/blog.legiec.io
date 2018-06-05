@@ -19,7 +19,7 @@ That wound up in the company shipping nothing meaningful for a number of years, 
     
 blockquote “However, many of us are frustrated. Those of us who run some of the most popular projects on GitHub feel completely ignored by you. We’ve gone through the only support channel that you have given us either to receive an empty response or even no response at all. We have no visibility into what has happened with our requests, or whether GitHub is working on them. Since our own work is usually done in the open and everyone has input into the process, it seems strange for us to be in the dark about one of our most important project dependencies.”
     
-## Microsoft + GitHub = ❤
+## Microsoft + GitHub = ❤️
 Over the last three years there’s been a seismic shift at Microsoft in the way it both thinks about building software, and how it shares it with the world. Famously insular under previous CEO, Steve Ballmer, his replacement, Satya Nadella, took the company in the other direction: opening up entirely.
 **Microsoft’s acquisition of GitHub makes so much sense** in this context, because it gives the startup a new home, and unlimited runway to keep building its tools for open source while getting the structure it needs to succeed. While I’m generally not a fan of platform consolidation like this, I simply don’t believe GitHub could do it in the long run on its own.
 

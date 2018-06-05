@@ -6,7 +6,7 @@
   <main class="article-card__body">
     <p class="article-card__title"><%= post.title %></p>
     <p class="article-card__meta">
-      Reading time: <em><%= symbolsTime(post.content) %></em>
+      Reading time: <em><%= symbolsTime(post.content, config.symbols_count_time.awl, config.symbols_count_time.wpm, config.symbols_count_time.suffix) %></em>
     </p>
   </main>
 </a>

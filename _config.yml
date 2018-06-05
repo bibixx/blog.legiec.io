@@ -89,8 +89,18 @@ symbols_count_time:
   time: true
   total_symbols: true
   total_time: true
+  awl: 4
+  wpm: 275
+  suffix: "min."
 
 prism_plugin:
   mode: 'preprocess'
   line_number: true
   custom_css: 'themes/bartoszlegiec/source/css/prism.css'
+
+githubEmojis:
+  enable: true
+  className: github-emoji
+  unicode: true
+  styles:
+  localEmojis:

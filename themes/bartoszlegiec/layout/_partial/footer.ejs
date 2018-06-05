@@ -1,7 +1,8 @@
-<footer id="footer">
+<footer id="footer" class="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>&nbsp;&nbsp;•&nbsp;&nbsp;<%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
+      <span class="footer__copy">&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %></span>
+      <span class="footer__power"><%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a></span>
     </div>
   </div>
 </footer>

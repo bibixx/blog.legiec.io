@@ -1,10 +1,26 @@
-#footer
+.footer
   text-align: center
   // margin-top: calc(-10vh + 1px)
   padding-top: 0
-  font-size: 16px
+  font-size: 0
   background: transparentize($link-color, .9)
 
   .outer
     +container
-    padding: 1em 32px
+    display: flex
+    justify-content: center
+    padding: 16px 32px
+
+  &__copy, &__power
+    font-size: 16px
+
+    +sm-down
+      display: block
+
+  &__copy
+    &::after
+      content: "•"
+      padding: 0 .5em
+
+      +sm-down
+        display: none
