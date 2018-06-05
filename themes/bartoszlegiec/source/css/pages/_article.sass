@@ -1,0 +1,102 @@
+.article
+  $r: &
+  
+  &--full
+    +container
+    margin-top: calc(100vh - 10rem - 32px)
+    margin-bottom: -10vh    
+    box-sizing: border-box
+    border-radius: 2px
+    line-height: 1.58
+    background-color: transparent
+    transition: background-color .2s ease-in-out
+    text-align: justify
+
+    &#{$r}--scrolled
+      background-color: #fff
+      
+      #{$r}__body
+        opacity: 1
+
+    #{$r}__body
+      opacity: 0
+      transition: opacity .2s ease-in-out
+  
+  p:last-child
+    margin-bottom: 0
+
+  h1
+    display: inline
+    margin: 0
+    font-weight: 700
+    font-size: 2.5em
+    background: $body-color
+    line-height: 1.5
+    padding: 8px 32px
+    margin-left: -32px
+    margin-right: -32px
+    box-decoration-break: clone
+    -webkit-box-decoration-break: clone
+    border-radius: 2px
+  
+.article-title-image
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  flex-direction: row-reverse
+  height: 100vh
+  width: 100vw
+  background-size: contain
+  background-position: center center
+  background-repeat: no-repeat
+  position: absolute
+  z-index: -1
+  top: 0
+  left: 0
+  transition: transform .2s ease-in-out
+  padding: 32px 32px 8px 32px
+  box-sizing: border-box
+
+  &__image-source
+    text-shadow: 0 0 10px rgba(0,0,0,0.5)
+    
+    a
+      +a-underline
+      color: #fff
+      font-weight: 300
+      font-style: italic
+      font-size: .75em
+
+  &__go-back
+    display: inline-flex
+    align-items: center
+    text-shadow: 0 0 10px rgba(0,0,0,0.5)
+
+    &, a
+      color: #fff
+
+    a
+      text-decoration: none
+      position: relative
+      margin-left: 8px
+      
+      &::after
+        left: -4px
+        right: -4px
+
+#article-nav
+  background: transparentize($link-color, .9)
+
+  h2
+    +container
+    margin: 0 auto
+    padding: .83em 32px 0
+
+.next-articles
+  +container
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  grid-gap: 32px
+
+#comments
+  +container

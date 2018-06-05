@@ -1,0 +1,80 @@
+<% if (!index) { %>
+<header
+  role="banner"
+  class="article-title-image"
+  style="background-image: url('<%= post.image %>');<% if (post.fill_color) { %> background-color: <%= post.fill_color %>;<% } %><% if (post.background_type) { %> background-size: <%= post.background_type %>;<% } %>"
+>
+  <!-- <nav class="article-title-image__go-back">
+    <i class="material-icons">chevron_left</i>
+    <a href="<%= config.root %>"><%= __('backtoroot') %></a>
+  </nav> -->
+  
+  
+  <% const src = post.image_source ? post.image_source.match(/https?:(\/\/.+?\.)?.+?\.[^\/]+/) : null %>
+  <% if (src) { %>
+    <div class="article-title-image__image-source">
+      <a href="<%= post.image_source %>" target="_blank">Source: <%= src[0] %></a>
+    </div>
+  <% } %>
+</header>
+<% } %>
+
+<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %> <% if (!index) {%>article--full<% } else { %>article--index<% } %>" itemscope itemprop="blogPost">
+  <% if (index){ %>
+    <a
+      href="<%- post.path %>"
+      target="_blank"
+      itemprop="url"
+      class="article__index-image"
+      style="background-image: url('<%= post.image %>');<% if (post.fill_color) { %> background-color: <%= post.fill_color %>;<% } %><% if (post.background_type) { %> background-size: <%= post.background_type %>;<% } %>"
+      ></a>
+  <% } %>
+
+  <header class="article__title">
+    <% if (post.link || post.title){ %>
+        <%- partial('post/title', {class_name: 'article-title'}) %>
+    <% } %>
+  </header>
+
+  
+  <main class="article__body" itemprop="articleBody">
+    <div class="article-meta">
+      <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+      <%- partial('post/reading-time') %>
+      <%- partial('post/category') %>
+    </div>
+
+    <% if (post.excerpt && index){ %>
+      <%- post.excerpt %>
+      <% if (theme.excerpt_link){ %>
+        <p class="article-more-link">
+          <a href="<%- url_for(post.path) %>"><%= theme.excerpt_link %></a>
+        </p>
+      <% } %>
+    <% } else { %>
+      <%- post.content %>
+    <% } %>
+  </main>
+
+  <footer class="article__footer">
+    <% if (!index){ %>
+      <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
+    <% } %>
+    <% if (!index && post.comments && config.disqus_shortname){ %>
+      <a href="#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
+    <% } %>
+    <%- partial('post/tag') %>
+  </footer>
+</article>
+
+<% if (!index){ %>
+  <%- partial('post/nav') %>
+<% } %>
+
+<% if (!index && post.comments && config.disqus_shortname){ %>
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+<% } %>

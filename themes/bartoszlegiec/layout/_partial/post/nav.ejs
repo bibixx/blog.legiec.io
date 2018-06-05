@@ -1,0 +1,31 @@
+<nav id="article-nav">
+  <%
+    const posts = site.posts.data.sort( (p1, p2) => p1.date - p2.date )
+    const index = posts.findIndex(p => p._id === post._id)
+    let postsToDisplay;
+
+    postsToDisplay = posts
+      .filter(p => p._id !== post._id)
+
+    if (index === posts.length - 1) {
+      postsToDisplay = postsToDisplay
+        .slice(index - 3, index)
+    } else if (index === posts.length - 2) {
+      postsToDisplay = postsToDisplay
+        .slice(index - 2, index + 1)
+    } else {
+      postsToDisplay = postsToDisplay
+        .slice(index - 1, index + 2)
+    }
+  %>
+
+  <h2>
+    More articles
+  </h2>
+
+  <div class="next-articles">
+    <% postsToDisplay.forEach((p) => { %>
+      <%- partial('article-card', {post: p}) %>
+    <% }) %>
+  </div>
+</nav>

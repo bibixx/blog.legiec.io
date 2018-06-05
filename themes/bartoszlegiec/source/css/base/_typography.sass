@@ -1,0 +1,23 @@
+body
+  font-family: "Noto Serif", Georgia, 'Times New Roman', Times, serif
+  color: rgba(0,0,0,.84)
+  font-weight: 400
+  
+\:root
+  font-size: 21px
+
+a
+  position: relative
+  text-decoration: none
+  color: $link-color
+  +a-underline
+
+p
+  line-height: 1.58
+
+mark
+  background-color: transparentize($mark-color, .75)
+
+*::selection
+  background: rgba(0,0,0,0.75)
+  color: #fff

@@ -1,0 +1,63 @@
+#mobile-nav
+  display: none
+
+.site-header
+  grid-area: 1 / start / 1 / end
+  width: 100%
+  position: relative
+  background: $link-color
+  margin-bottom: 32px
+  padding: 24px 0
+
+  &__menu
+    display: grid
+    grid-template-columns: 1fr 25vw 25vw 25vw 1fr
+    grid-template-areas: "start left logo right end"
+    width: 100%
+
+  &__left
+    grid-area: left
+    display: flex
+    align-items: center
+
+    a
+      color: #fff
+      margin-right: 1em
+
+  &__right
+    grid-area: right
+    display: grid
+    grid-template-columns: 1fr 10vw
+    grid-template-areas: "left right"
+
+  &__btns
+    grid-area: right
+    display: flex
+    justify-content: flex-end
+
+    a
+      display: flex
+      justify-content: center
+      align-items: center
+
+    &__rss
+      margin-right: .5em
+
+    .material-icons
+      color: #fff
+      font-size: 1.5em
+
+  &__title
+    display: flex
+    align-items: center
+    justify-content: center
+    grid-area: logo
+    margin: 0
+    text-align: center
+
+    a
+      color: #fff
+      font-size: 2rem
+      text-transform: uppercase
+      box-shadow: none
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.2)

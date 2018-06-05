@@ -1,0 +1,12 @@
+<a href="<%- url_for(post.path) %>" class="article-card">
+  <div
+    class="article-card__image"
+    style="background-image: url('<%= post.image %>');<% if (post.fill_color) { %> background-color: <%= post.fill_color %>;<% } %><% if (post.background_type) { %> background-size: <%= post.background_type %>;<% } %>"
+  ></div>
+  <main class="article-card__body">
+    <p class="article-card__title"><%= post.title %></p>
+    <p class="article-card__meta">
+      Reading time: <em><%= symbolsTime(post.content) %></em>
+    </p>
+  </main>
+</a>
