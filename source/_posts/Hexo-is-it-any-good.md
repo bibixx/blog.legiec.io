@@ -54,3 +54,5 @@ Also when you create a post there is also this header part at the begging of `.m
 
 ## Fin
 Personally I am very happy with using it for now. I hope that it won't change after time.
+
+GitHub repository for this project: https://github.com/bibixx/blog.legiec.io
