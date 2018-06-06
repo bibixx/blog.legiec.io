@@ -1,5 +1,8 @@
 ---
 title: {{ title }}
 date: {{ date }}
-tags:
+image: 
+fill_color: 
+image_source: 
+category: 
 ---

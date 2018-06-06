@@ -4,9 +4,6 @@
     <div class="wrap<% if (page.__post){ %> wrap--post<% } %>">
       <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
       <section id="main"><%- body %></section>
-      <!-- <% if (page.__index){ %>
-        <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
-      <% } %> -->
       <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
     </div>
     <%- partial('_partial/after-footer') %>

@@ -24,3 +24,23 @@ mark
 *::selection
   background: rgba(0,0,0,0.75)
   color: #fff
+
+code:not([class*="language-"])
+  background: $code-background
+  padding: 4px 8px
+  white-space: nowrap
+  color: #fff
+  border-radius: 2px
+
+blockquote
+  border-left: 5px solid rgba(0,0,0,0.5)
+  margin: 0
+  padding: 0 1em
+  font-style: italic
+
+  p
+    &:first-child::before
+      content: "“"
+
+    &:last-child::after
+      content: "”"
