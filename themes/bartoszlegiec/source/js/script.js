@@ -57,4 +57,22 @@
   $menuButton.addEventListener("click", () => {
     $menuContainer.classList.add(menuOpenClass);
   });
+
+  Prism.hooks.add('complete', function(env) {
+    document.querySelectorAll("pre.language-css").forEach(($el) => {
+      $el.querySelectorAll(".token.property").forEach($var => {
+        if (/--/.test($var.innerHTML)) {
+          $var.classList.add("variable");
+        }
+      });
+    });
+
+    document.querySelectorAll("pre.language-javascript, pre.language-jsx").forEach(($el) => {
+      $el.querySelectorAll(".token.punctuation").forEach($var => {
+        if (/["']/.test($var.innerHTML)) {
+          $var.classList.add("quote");
+        }
+      });
+    });
+  });
 })();

@@ -95,9 +95,9 @@ symbols_count_time:
 
 prism_plugin:
   mode: 'preprocess'
-  theme: default
-  line_number: true
+  theme: false
   custom_css: 'css/prism-custom.css'
+  line_number: true
 
 githubEmojis:
   enable: true

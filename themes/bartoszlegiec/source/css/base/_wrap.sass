@@ -6,23 +6,23 @@
   &:not(&--post)
     display: grid
     grid-template-columns: 1fr 75vw 1fr
-    grid-template-areas: "start header end" "start main end" "start footer end"
+    grid-template-areas: "header header header" "start main end" "footer footer footer"
     grid-template-rows: auto 1fr auto
 
     +md-down
       grid-template-columns: 1fr 90vw 1fr
 
     #main
-      grid-area: 2 / main
+      grid-column: main
 
     #footer
-      grid-area: 3 / start / 3 / end
+      grid-column: footer
 
     .site-header
       &__hamburger
         display: none
         align-items: center
-        grid-area: left
+        grid-column: left
         font-size: 2rem
         background: transparent
         border: none

@@ -26,21 +26,21 @@ mark
   color: #fff
 
 code:not([class*="language-"])
-  background: $code-background
-  padding: 4px 8px
-  white-space: nowrap
-  color: #fff
+  background: #1D1F20
+  padding: 2px 8px
+  color: #ddca7e
   border-radius: 2px
+  font-family: Monaco, monospace
+  
+  &::selection
+    background: #282A2B
 
 blockquote
-  border-left: 5px solid rgba(0,0,0,0.5)
+  border-left: 5px solid #141414
   margin: 0
   padding: 0 1em
   font-style: italic
 
-  p
-    &:first-child::before
-      content: "“"
-
-    &:last-child::after
-      content: "”"
+  cite
+    &::before
+      content: "– "

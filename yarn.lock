@@ -1208,9 +1208,9 @@ hexo-pagination@0.0.2:
   dependencies:
     utils-merge "^1.0.0"
 
-hexo-prism-plugin@^2.2.0:
+hexo-prism-plugin@ele828/hexo-prism-plugin:
   version "2.2.0"
-  resolved "https://registry.yarnpkg.com/hexo-prism-plugin/-/hexo-prism-plugin-2.2.0.tgz#0f310cb0620c5de32f04bc4e176aef085af538ae"
+  resolved "https://codeload.github.com/ele828/hexo-prism-plugin/tar.gz/b4b0b878f56a64425ceceaf8d621dbd96772b958"
   dependencies:
     dir-resolve "^1.0.2"
     hexo-fs "^0.2.1"

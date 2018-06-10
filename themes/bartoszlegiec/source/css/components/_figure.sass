@@ -13,7 +13,7 @@ figure
     font-style: italic
 
   &.small
-    & > video, img
+    & > *:first-child, & > br:first-child + *
       display: block
       width: 40%
       margin: 0 auto
@@ -23,3 +23,19 @@ figure
 
       @media(max-width: 600px)
         width: 100%
+
+  &.medium
+    & > *:first-child, & > br:first-child + *
+      display: block
+      width: 66%
+      margin: 0 auto
+
+      +sm-down
+        width: 75%
+
+      @media(max-width: 600px)
+        width: 100%
+
+  &.full
+    & > *:first-child, & > br:first-child + *
+      width: 100%
