@@ -8,11 +8,12 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
   ssh $SSH_USERNAME@$SSH_HOSTNAME -o StrictHostKeyChecking=no <<-EOF
     cd $SSH_PROJECT_FOLDER
     git reset --hard
+    git clean -f
     rm -rf node_modules
     git pull
-    npm install
-    npm run hexo clean
-    npm run hexo generate
+    yarn
+    yarn hexo clean
+    yarn hexo generate
     rm -rf $SSH_COPY_TO/*
     cp -r ./public/* $SSH_COPY_TO
 EOF
