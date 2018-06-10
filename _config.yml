@@ -107,3 +107,8 @@ githubEmojis:
   localEmojis:
 
 google_analytics: "UA-120447939-1"
+
+codepen:
+  username: "bibixx"
+  height: 500
+  theme: "33713"

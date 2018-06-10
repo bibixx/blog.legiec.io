@@ -30,7 +30,7 @@ I was quite surprised that even IE 10 "supports" it. Of course with some caveats
 
 So this is what docs say about it. But how do we use it in CSS? Firstly you create a wrapper and give it `display: grid`. Automatically all of its children will become grid items.
 
-<p data-height="500" data-theme-id="33713" data-slug-hash="oyBQww" data-default-tab="css,result" data-user="bibixx" data-embed-version="2" data-pen-title="oyBQww" class="codepen">See the Pen <a href="https://codepen.io/bibixx/pen/oyBQww/">oyBQww</a> by bibixx (<a href="https://codepen.io/bibixx">@bibixx</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+{% codepen oyBQww "result" %}
 
 You might think that we have been creating grid layouts like this forever. And you would be right. However aside from ease of declaring layout CSS Grid it gives us some features that weren't possible earlier.
 
@@ -39,14 +39,15 @@ As I mentioned earlier CSS Grid makes it much easier to define layouts.
 
 Say we'd like to create 3 columns: First with width of 300px, and next 2 to have equal widths. With flexbox we'd do it something like this.
 
-<p data-height="500" data-theme-id="33713" data-slug-hash="JZEeyW" data-default-tab="css,result" data-user="bibixx" data-embed-version="2" data-pen-title="JZEeyW" class="codepen">See the Pen <a href="https://codepen.io/bibixx/pen/JZEeyW/">JZEeyW</a> by bibixx (<a href="https://codepen.io/bibixx">@bibixx</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+{% codepen JZEeyW "css,result" %}
 
 And with grid we can simply do it like this.
 
-<p data-height="500" data-theme-id="33713" data-slug-hash="gKgQxj" data-default-tab="css,result" data-user="bibixx" data-embed-version="2" data-pen-title="gKgQxj" class="codepen">See the Pen <a href="https://codepen.io/bibixx/pen/gKgQxj/">gKgQxj</a> by bibixx (<a href="https://codepen.io/bibixx">@bibixx</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+{% codepen gKgQxj "css,result" %}
+
 Notice that we don't have to use 2 wrappers now. Similar thing can be done with rows.
 
-<p data-height="500" data-theme-id="33713" data-slug-hash="zaNMPB" data-default-tab="css,result" data-user="bibixx" data-embed-version="2" data-pen-title="zaNMPB" class="codepen">See the Pen <a href="https://codepen.io/bibixx/pen/zaNMPB/">zaNMPB</a> by bibixx (<a href="https://codepen.io/bibixx">@bibixx</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+{% codepen zaNMPB "css,result" %}
 
 Using `grid-template-*` gives us a way to declare all of column sizes in one place – in a parent element. `grid-template-*` accepts as many arguments as you wish and each argument specifies width of each column/row.
 
@@ -56,7 +57,7 @@ You may have noticed the new unit – `fr`. As you may have also concluded from 
 ## Positioning elements in grid
 So next thing that different in grid opposed to flexbox is the fact that you can basically place elements inside the grid however you want. Here is an example of simple blog layout.
 
-<p data-height="500" data-theme-id="33713" data-slug-hash="PaWxVV" data-default-tab="css,result" data-user="bibixx" data-embed-version="2" data-pen-title="PaWxVV" class="codepen">See the Pen <a href="https://codepen.io/bibixx/pen/PaWxVV/">PaWxVV</a> by bibixx (<a href="https://codepen.io/bibixx">@bibixx</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+{% codepen PaWxVV "css,result" %}
 
 Using grid we can tell every element to be placed at specific positions. Here we make element start at grid one and end at 4.
 
@@ -89,11 +90,11 @@ As you may again have deduced we can do it also with rows using `grid-row-*`.
 ## `grid-template-area`
 But who wants to deal with column numbers? We can add names to areas with `grid-template-area`!
 
-<p data-height="500" data-theme-id="33713" data-slug-hash="VdPgjY" data-default-tab="css,result" data-user="bibixx" data-embed-version="2" data-pen-title="VdPgjY" class="codepen">See the Pen <a href="https://codepen.io/bibixx/pen/VdPgjY/">VdPgjY</a> by bibixx (<a href="https://codepen.io/bibixx">@bibixx</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+{% codepen VdPgjY "css,result" %}
 
 You can see I have declared another property `grid-template-areas` on wrapper. So if we take `grid-template-columns: 1fr 70vw 1fr` we will have following areas: "start" with width of 1fr, "main" with width of 70vw and finally "end" with width of 1fr. It also applies to rows. To create named rows we can do it like this
 
-<p data-height="500" data-theme-id="33713" data-slug-hash="oyBJym" data-default-tab="css,result" data-user="bibixx" data-embed-version="2" data-pen-title="oyBJym" class="codepen">See the Pen <a href="https://codepen.io/bibixx/pen/oyBJym/">oyBJym</a> by bibixx (<a href="https://codepen.io/bibixx">@bibixx</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+{% codepen oyBJym "css,result" %}
 
 Also here I had to use `grid-area` which is next shorthand. This time for
 ```css

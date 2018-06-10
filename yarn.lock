@@ -1138,6 +1138,10 @@ hexo-cli@^1.1.0:
     resolve "^1.5.0"
     tildify "^1.2.0"
 
+hexo-codepen-v2@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/hexo-codepen-v2/-/hexo-codepen-v2-0.2.1.tgz#16f79d9429564efa47245a55392984cfc1a3f84c"
+
 hexo-filter-github-emojis@^1.4.4:
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/hexo-filter-github-emojis/-/hexo-filter-github-emojis-1.4.4.tgz#9a4012d2b578fe8c10d80c37268c3a0971f5ea62"
