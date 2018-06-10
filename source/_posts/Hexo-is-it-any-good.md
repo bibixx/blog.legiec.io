@@ -1,7 +1,7 @@
 ---
 title: Hexo – is it any good?
 date: 2018-06-06 20:00:00
-image: /static/2018/06/06-hexo.svg
+image: /static/2018/06/06-hexo.png
 fill_color: "#172027"
 image_source: 
 category:
