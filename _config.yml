@@ -90,7 +90,7 @@ symbols_count_time:
   total_symbols: true
   total_time: true
   awl: 4
-  wpm: 275
+  wpm: 200
   suffix: "min."
 
 prism_plugin:
