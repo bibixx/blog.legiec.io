@@ -23,6 +23,12 @@
   <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id, image: page.image ? "https://blog.legiec.io" + page.image : null}) %>
+  
+  <% if (page.__post) { %>
+    <meta name="twitter:label1" value="Reading time 👀">
+    <meta name="twitter:data1" value="<%= symbolsTime(page.content, config.symbols_count_time.awl, config.symbols_count_time.wpm, config.symbols_count_time.suffix) %>">
+  <% } %>
+
   <% if (theme.rss){ %>
     <link rel="alternate" href="<%= url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml">
   <% } %>

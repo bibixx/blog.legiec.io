@@ -91,7 +91,7 @@ symbols_count_time:
   total_time: true
   awl: 4
   wpm: 200
-  suffix: "min."
+  suffix: "minutes"
 
 prism_plugin:
   mode: 'preprocess'
