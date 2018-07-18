@@ -22,7 +22,11 @@
   %>
   <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id, image: page.image ? "https://blog.legiec.io" + page.image : null}) %>
+
+  <% if (page.__post) {%>
+  <% const excerpt = text => text.length <= 200 ? text : text.slice(0, 200 - 3) + "..." %>
+  <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id, image: page.image ? "https://blog.legiec.io" + page.image : null, description: excerpt(page.excerpt || page.content)}) %>
+  <% } %>
   
   <% if (page.__post) { %>
     <meta name="twitter:label1" value="Reading time 👀">
