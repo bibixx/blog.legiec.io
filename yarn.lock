@@ -1212,9 +1212,9 @@ hexo-pagination@0.0.2:
   dependencies:
     utils-merge "^1.0.0"
 
-hexo-prism-plugin@ele828/hexo-prism-plugin:
-  version "2.2.0"
-  resolved "https://codeload.github.com/ele828/hexo-prism-plugin/tar.gz/b4b0b878f56a64425ceceaf8d621dbd96772b958"
+hexo-prism-plugin@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/hexo-prism-plugin/-/hexo-prism-plugin-2.3.0.tgz#63e2d5d604dc0d89b3f55a4db344f96fe689cca6"
   dependencies:
     dir-resolve "^1.0.2"
     hexo-fs "^0.2.1"
@@ -1265,9 +1265,9 @@ hexo-server@^0.2.0:
     opn "^4.0.0"
     serve-static "^1.10.0"
 
-hexo-symbols-count-time@bibixx/hexo-symbols-count-time:
-  version "0.4.2"
-  resolved "https://codeload.github.com/bibixx/hexo-symbols-count-time/tar.gz/ad2af9a03d80d9cb3ad62a49452be1c94783b283"
+hexo-symbols-count-time@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/hexo-symbols-count-time/-/hexo-symbols-count-time-0.4.4.tgz#c5bad76d445d7e0a1ee8a46c7ad23349bc162c1d"
 
 hexo-util@^0.6.0, hexo-util@^0.6.2, hexo-util@^0.6.3:
   version "0.6.3"
