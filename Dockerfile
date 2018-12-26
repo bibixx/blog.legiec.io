@@ -1,10 +1,14 @@
-# FROM node:carbon-alpine AS build
-FROM node:alpine AS build
+FROM node:dubnium-alpine AS build
+
+RUN apk update && apk add yarn python g++ make && rm -rf /var/cache/apk/*
 
 WORKDIR /app
+
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
+
 COPY . .
 
-RUN yarn install
 RUN yarn build
 
 FROM nginx:stable-alpine

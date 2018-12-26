@@ -1,0 +1,13 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: "Dockerfile"
+    container_name: blog.legiec.io
+    expose:
+       - 80
+networks:
+  default:
+    external:
+      name: nginx-proxy
