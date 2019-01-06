@@ -17,6 +17,6 @@ RUN ls
 
 RUN yarn build
 
-FROM nginx:stable-alpine
+FROM nginx:1.14-alpine
 COPY --from=build /app/public /var/www
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
