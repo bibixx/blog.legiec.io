@@ -13,7 +13,10 @@ COPY source/ ./source/
 COPY themes/ ./themes/
 COPY _config.yml .
 
-RUN yarn build
+ENV NODE_ENV production
+
+RUN yarn generate
+RUN yarn img
 
 FROM nginx:1.14-alpine
 COPY --from=build /app/public /var/www
