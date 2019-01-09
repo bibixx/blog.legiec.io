@@ -13,8 +13,6 @@ COPY source/ ./source/
 COPY themes/ ./themes/
 COPY _config.yml .
 
-RUN ls
-
 RUN yarn build
 
 FROM nginx:1.14-alpine
