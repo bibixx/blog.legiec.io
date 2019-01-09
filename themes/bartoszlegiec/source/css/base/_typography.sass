@@ -4,10 +4,10 @@ body
   font-weight: 400
   
 \:root
-  font-size: 20px
+  font-size: 1.25rem
 
   +md-down
-    font-size: calc(16px + .25vw)
+    font-size: calc(1rem + .25vw)
 
 a
   position: relative
@@ -27,7 +27,7 @@ mark
 
 code:not([class*="language-"])
   background: #1c2128
-  padding: 2px 8px
+  padding: 0.125em 0.5em
   color: #c792ea
   border-radius: 0.25em
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu', monospace;
@@ -36,7 +36,7 @@ code:not([class*="language-"])
     background: #282A2B
 
 blockquote
-  border-left: 5px solid #141414
+  border-left: 0.3125em solid #141414
   margin: 0
   padding: 0 1em
   font-style: italic
@@ -44,3 +44,9 @@ blockquote
   cite
     &::before
       content: "– "
+
+h1, h2, h3, h4
+  font-family: "Montserrat", "Noto Serif", Georgia, 'Times New Roman', Times, sans-serif
+  line-height: 1.2
+  font-weight: 800
+  text-align: left
