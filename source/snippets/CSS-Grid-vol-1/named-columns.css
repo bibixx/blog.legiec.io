@@ -1,0 +1,19 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 70vw 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "start main end";
+  min-height: 100vh;
+}
+
+header {
+  grid-column: start / end;
+}
+  
+main {
+  grid-column: main;
+}
+  
+footer {
+  grid-column: start / end;
+}
