@@ -60,14 +60,14 @@ This element is to display actual image. We have to create this one due to the [
 
 This one will create the shadow. We give it a desired background and apply filter with value of `blur(50px)`. This will create some nice looking blurred image that imitates shadow.
 
-{% codepen xzNxmg "css,result" %}
+{% fiddle name=before files=scss fiddle=bibixx/6b0mntyu resultsBg=#151515 %}
 
 ## But there is one more thing…
 
 Obviously it works not only with gradients but also with any image supported by `background-image`.
 
-{% codepen YvbPrJ "result" %}
+{% fiddle name=one-more-thing files=scss fiddle=bibixx/vjpdwqcr resultsBg=#151515 %}
 
 And it even works with gifs! So we can create something like those fancy tvs with leds behind that were quite popular some time ago. (NOTE: Chrome doesn't handle it very well, however on Firefox it works ok).
 
-{% codepen rKgBad "result" %}
+{% fiddle name=gif fiddle=bibixx/vr60cb2m resultsBg=#151515 iframeHeight=634 %}

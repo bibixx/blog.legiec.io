@@ -20,9 +20,7 @@ hexo.extend.tag.register('fiddle', async function(args, body) {
     return
   }
 
-  if (argv.files) {
-    argv.files = argv.files.split(',');
-  }
+  argv.files = (argv.files !== undefined) ? argv.files.split(',') : [];
 
   const src = pathFn.join(sourceDir, codeDir, snippets, argv.name);
 
@@ -43,6 +41,7 @@ hexo.extend.tag.register('fiddle', async function(args, body) {
   return hexo.render.render({ path: LAYOUT_TEMPLATE_PATH }, {
     codes: await Promise.all(fileBlocks),
     fiddle: argv.fiddle,
-    resultsBg: argv.resultsBg || ''
+    resultsBg: argv.resultsBg || '',
+    iframeHeight: argv.iframeHeight || '',
   });
 }, { async: true});

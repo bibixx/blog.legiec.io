@@ -1,4 +1,6 @@
-<div class="jsfiddle">
+<% const noCode = codes.length === 0; %>
+
+<div class="jsfiddle <%= noCode ? 'jsfiddle--no-code' : '' %>">
   <header class="jsfiddle__header">
     <% codes.forEach(({ code, lang }, i) => { %>
       <button class="jsfiddle__header__button <%= i === 0 ? 'jsfiddle__header__button--current' : '' %>" data-code-type="<%= lang %>"><%= lang %></button>
@@ -6,17 +8,20 @@
     <div class="jsfiddle__header__button-filler"></div>
     <a
       class="jsfiddle__header__button"
-      href="https://jsfiddle.net/bibixx/4sL836ec"
+      href="https://jsfiddle.net/<%= fiddle %>"
       target="_blank"
-    >edit in JSFiddle</a>
+    >edit on JSFiddle</a>
   </header>
-  <div class="jsfiddle__code">
-    <% codes.forEach(({ code, lang }, i) => { %>
-      <div class="jsfiddle__code__codes <%= i === 0 ? 'jsfiddle__code__codes--visible' : '' %>" data-code-type="<%= lang %>">
-        <%- code %>
-      </div>
-    <% }); %>
-  </div>
+
+  <% if (!noCode) { %>
+    <div class="jsfiddle__code">
+      <% codes.forEach(({ code, lang }, i) => { %>
+        <div class="jsfiddle__code__codes <%= i === 0 ? 'jsfiddle__code__codes--visible' : '' %>" data-code-type="<%= lang %>">
+          <%- code %>
+        </div>
+      <% }); %>
+    </div>
+  <% } %>
 
   <div
     class="jsfiddle__result"
@@ -24,9 +29,8 @@
   >
     <iframe
       class="jsfiddle__result__iframe"
-      width="100%"
-      height="300"
       src="https://jsfiddle.net/<%= fiddle %>/embedded/result/dark/"
+      <%- iframeHeight ? `style="height: ${+iframeHeight + 50}px"` : '' %>
       frameborder="0"
     ></iframe>
   </div>
