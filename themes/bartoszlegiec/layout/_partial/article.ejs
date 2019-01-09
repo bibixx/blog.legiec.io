@@ -4,12 +4,6 @@
   class="article-title-image"
   style="background-image: url('<%= post.image %>');<% if (post.fill_color) { %> background-color: <%= post.fill_color %>;<% } %><% if (post.background_type) { %> background-size: <%= post.background_type %>;<% } %>"
 >
-  <!-- <nav class="article-title-image__go-back">
-    <i class="material-icons">chevron_left</i>
-    <a href="<%= config.root %>"><%= __('backtoroot') %></a>
-  </nav> -->
-  
-  
   <% const src = post.image_source ? post.image_source.match(/https?:(\/\/.+?\.)?.+?\.[^\/]+/) : null %>
   <% if (src) { %>
     <div class="article-title-image__image-source">

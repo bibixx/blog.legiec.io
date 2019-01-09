@@ -8,7 +8,8 @@
   "scripts": {
     "start": "hexo server",
     "server": "hexo server",
-    "build": "npm run clean && NODE_ENV=production hexo generate && hexo img",
+    "build": "hexo clean && NODE_ENV=production hexo generate && hexo img",
+    "generate": "hexo generate",
     "hexo": "hexo",
     "new": "hexo new",
     "clean": "hexo clean",
