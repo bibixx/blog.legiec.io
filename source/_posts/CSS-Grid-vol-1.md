@@ -116,9 +116,7 @@ Also here I had to use `grid-area` which is next shorthand. This time for
 
 Property `grid-template-areas` can be given more than one value. Each value surrounded by `"` and spaced with space is responsible for each row. So `grid-template-areas: "header header header header" "start main nav end" "footer footer footer footer"` would give us something like this
 
-<figure class="medium">
-  ![Page layout specified in code snippet](/static/2018/06/10-layout.png)
-</figure>
+{% fiddle name=merged-grid files=css fiddle=bibixx/gcypbw80 iframeHeight=450 %}
 
 ## Thank you... For now
 
