@@ -76,7 +76,11 @@
 .mobile-menu
   $r: &
 
+  display: none
   z-index: 2
+
+  +sm-down
+    display: flex
 
   &--open
     #{$r}__body
