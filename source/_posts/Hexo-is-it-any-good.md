@@ -6,7 +6,7 @@ fill_color: "#172027"
 image_source: 
 category:
 ---
-I have previously created a blog but not for myself and it was running on [Jekyll](). To be honest I enjoyed it. I was thinking about a blog for some time now and when I have read about on [piecioshka.pl](https://piecioshka.pl/blog/2018/05/28/jak-zalozyc-bloga-korzystajac-z-hexo.html) I have decided that it is the time. I was hesitant to start blog since I knew I would spend definitely too much time on writing css for my custom theme. And as I predicted I have spent last two days doing so :smile: but it was worth it. However time required to set up [Hexo](https://hexo.io) was much quicker than that.
+I have previously created a blog but not for myself and it was running on [Jekyll](https://jekyllrb.com/). To be honest I enjoyed it. I was thinking about a blog for some time now and when I have read about on [piecioshka.pl](https://piecioshka.pl/blog/2018/05/28/jak-zalozyc-bloga-korzystajac-z-hexo.html) I have decided that it is the time. I was hesitant to start blog since I knew I would spend definitely too much time on writing css for my custom theme. And as I predicted I have spent last two days doing so :smile: but it was worth it. However time required to set up [Hexo](https://hexo.io) was much quicker than that.
 
 <!-- more -->
 

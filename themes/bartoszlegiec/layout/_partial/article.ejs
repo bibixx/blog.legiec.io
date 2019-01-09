@@ -21,11 +21,14 @@
 
 <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %> <% if (!index) {%>article--full<% } else { %>article--index<% } %>" itemscope itemprop="blogPost">
   <% if (index){ %>
+    <% const bgImage = hexo.env.env !== 'production'
+      ? post.image
+      : post.image.replace(/\.(.+)$/, "_thumb.$1"); %>
     <a
       href="<%- post.path %>"
       itemprop="url"
       class="article__index-image"
-      style="background-image: url('<%= post.image %>');<% if (post.fill_color) { %> background-color: <%= post.fill_color %>;<% } %><% if (post.background_type) { %> background-size: <%= post.background_type %>;<% } %>"
+      style="background-image: url('<%= bgImage %>');<% if (post.fill_color) { %> background-color: <%= post.fill_color %>;<% } %><% if (post.background_type) { %> background-size: <%= post.background_type %>;<% } %>"
       ></a>
   <% } %>
 

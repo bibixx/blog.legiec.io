@@ -5,6 +5,7 @@ image: /static/2018/06/10-css-grid.png
 fill_color: "#A1C6E7"
 image_source:
 category:
+snippets: 'CSS-Grid-vol-1'
 ---
 
 While I was creating theme for this blog I thought that I'd use CSS Grid Layout. Maybe not for the first time but certainly for the first time in a bigger project. Previously when I was supposed to create a website I wouldn't use it since I knew had to care about supporting something more than just newest browsers so grid would automatically be out of reach.
@@ -30,7 +31,7 @@ I was quite surprised that even IE 10 "supports" it. Of course with some caveats
 
 So this is what docs say about it. But how do we use it in CSS? Firstly you create a wrapper and give it `display: grid`. Automatically all of its children will become grid items.
 
-{% codepen oyBQww "result" %}
+{% fiddle name=intro files=css fiddle=bibixx/n70ogdeq %}
 
 You might think that we have been creating grid layouts like this forever. And you would be right. However aside from ease of declaring layout CSS Grid it gives us some features that weren't possible earlier.
 
@@ -40,15 +41,15 @@ As I mentioned earlier CSS Grid makes it much easier to define layouts.
 
 Say we'd like to create 3 columns: First with width of 300px, and next 2 to have equal widths. With flexbox we'd do it something like this.
 
-{% codepen JZEeyW "css,result" %}
+{% fiddle name=3-columns-flex files=css,html fiddle=bibixx/jys3qb96 %}
 
 And with grid we can simply do it like this.
 
-{% codepen gKgQxj "css,result" %}
+{% fiddle name=3-columns-grid files=css,html fiddle=bibixx/jys3qb96 %}
 
 Notice that we don't have to use 2 wrappers now. Similar thing can be done with rows.
 
-{% codepen zaNMPB "css,result" %}
+{% fiddle name=rows-grid files=css fiddle=bibixx/heu42v9w %}
 
 Using `grid-template-*` gives us a way to declare all of column sizes in one place – in a parent element. `grid-template-*` accepts as many arguments as you wish and each argument specifies width of each column/row.
 
@@ -60,7 +61,7 @@ You may have noticed the new unit – `fr`. As you may have also concluded from 
 
 So next thing that different in grid opposed to flexbox is the fact that you can basically place elements inside the grid however you want. Here is an example of simple blog layout.
 
-{% codepen PaWxVV "css,result" %}
+{% fiddle name=example-layout files=css,html fiddle=bibixx/y6qosndx %}
 
 Using grid we can tell every element to be placed at specific positions. Here we make element start at grid one and end at 4.
 
@@ -95,17 +96,17 @@ As you may again have deduced we can do it also with rows using `grid-row-*`.
 
 But who wants to deal with column numbers? We can add names to areas with `grid-template-area`!
 
-{% codepen VdPgjY "css,result" %}
+{% fiddle name=named-columns files=css fiddle=bibixx/qr0tde64 %}
 
 You can see I have declared another property `grid-template-areas` on wrapper. So if we take `grid-template-columns: 1fr 70vw 1fr` we will have following areas: "start" with width of 1fr, "main" with width of 70vw and finally "end" with width of 1fr. It also applies to rows. To create named rows we can do it like this
 
-{% codepen oyBJym "css,result" %}
+{% fiddle name=named-rows files=css,html fiddle=bibixx/6Lqxrp02 %}
 
 Also here I had to use `grid-area` which is next shorthand. This time for
 
 ```css
 #element {
-  /* grid-area: main; */
+  grid-area: main;
   grid-row-start: main;
   grid-column-start: main;
   grid-row-end: main;
@@ -115,9 +116,7 @@ Also here I had to use `grid-area` which is next shorthand. This time for
 
 Property `grid-template-areas` can be given more than one value. Each value surrounded by `"` and spaced with space is responsible for each row. So `grid-template-areas: "header header header header" "start main nav end" "footer footer footer footer"` would give us something like this
 
-<figure class="medium">
-  ![Page layout specified in code snippet](/static/2018/06/10-layout.png)
-</figure>
+{% fiddle name=merged-grid files=css fiddle=bibixx/gcypbw80 iframeHeight=450 %}
 
 ## Thank you... For now
 

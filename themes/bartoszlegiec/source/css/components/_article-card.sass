@@ -3,16 +3,16 @@
   flex-direction: column
   position: relative
   background: #fff
-  border-radius: 2px
+  border-radius: 0.25rem
   overflow: hidden
   color: #000
   transform: translateY(0)
   transition: transform .2s ease-in-out, box-shadow .2s ease-in-out
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+  box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.2)
 
   &:hover
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
-    transform: translateY(-5px)
+    box-shadow: 0 0.33rem 2rem rgba(0, 0, 0, 0.15)
+    transform: translateY(-0.33rem)
 
   &__image
     width: 100%
@@ -31,13 +31,15 @@
     flex-direction: column
     justify-content: space-between
     flex: 1
-    padding: 8px 16px
+    padding: 0.5rem 1rem
     
-    p
-      margin: 0
-
   &__title
-    font-weight: 700
+    font-family: "Montserrat", "Noto Serif", Georgia, 'Times New Roman', Times, sans-serif
+    line-height: 1.2
+    font-weight: 800
+    margin-bottom: 0.25em
+    margin-top: 0
 
   &__meta
     font-size: .75em
+    margin: 0
