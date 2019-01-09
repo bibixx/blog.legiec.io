@@ -1,0 +1,68 @@
+.jsfiddle
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-template-areas: "header header" "left right"
+  border-radius: 0.25rem
+  overflow: hidden
+
+  &__header
+    background: #1c2128
+    height: 48px
+    grid-area: header
+    z-index: 1
+    display: flex
+
+    &__button
+      display: flex
+      align-items: center
+      height: 100%
+      background: none
+      color: #fff
+      border: 0
+      font-size: 0.75rem;
+      font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace
+      text-decoration: none
+      box-shadow: none
+      padding: 2px 1rem 0
+      border-bottom: 2px solid transparent
+      box-sizing: border-box
+      cursor: pointer
+      outline: 0
+
+      &:focus 
+        background: rgba(255, 255, 255, 0.4)
+
+      &--current
+        border-bottom-color: #fff
+        background: rgba(255, 255, 255, 0.2)
+
+    &__button-filler
+      flex: 1
+
+  &__code
+    grid-area: left
+    min-width: 0
+    background: #1c2128
+
+    &__codes
+      display: none
+      height: 100%
+
+      &--visible
+        display: block
+
+  &__result
+    grid-area: right
+    line-height: 0
+    margin-top: -50px
+
+    &__iframe
+      height: calc(100% + 50px)
+      min-height: 350px
+
+
+pre.jsfiddle__code__codes__snippet
+  height: 100%
+  box-sizing: border-box
+  margin: 0
+  border-radius: 0

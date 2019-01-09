@@ -1,0 +1,33 @@
+<div class="jsfiddle">
+  <header class="jsfiddle__header">
+    <% codes.forEach(({ code, lang }, i) => { %>
+      <button class="jsfiddle__header__button <%= i === 0 ? 'jsfiddle__header__button--current' : '' %>" data-code-type="<%= lang %>"><%= lang %></button>
+    <% }); %>
+    <div class="jsfiddle__header__button-filler"></div>
+    <a
+      class="jsfiddle__header__button"
+      href="https://jsfiddle.net/bibixx/4sL836ec"
+      target="_blank"
+    >edit in JSFiddle</a>
+  </header>
+  <div class="jsfiddle__code">
+    <% codes.forEach(({ code, lang }, i) => { %>
+      <div class="jsfiddle__code__codes <%= i === 0 ? 'jsfiddle__code__codes--visible' : '' %>" data-code-type="<%= lang %>">
+        <%- code %>
+      </div>
+    <% }); %>
+  </div>
+
+  <div
+    class="jsfiddle__result"
+    <%- resultsBg ? `style="background-color: ${resultsBg}"` : '' %>
+  >
+    <iframe
+      class="jsfiddle__result__iframe"
+      width="100%"
+      height="300"
+      src="https://jsfiddle.net/<%= fiddle %>/embedded/result/dark/"
+      frameborder="0"
+    ></iframe>
+  </div>
+</div>

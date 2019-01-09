@@ -6,6 +6,7 @@ fill_color: "#151515"
 image_source:
 background_type: cover
 category:
+snippets: 'How-to-create-dynamic-shadows-in-CSS'
 ---
 
 Recently I wanted to create a gradient shadow – a shadow that would play nicely with gradient background. As we might suspect it needed a kind of a hack – it is CSS after all. But this hack is quite interesting so I wanted to share my idea with you.
@@ -47,7 +48,7 @@ This property allows to apply graphical filters on the element. We can change hu
 
 Thanks to that great feature we can achieve the shadow like this.
 
-{% codepen GGaRyQ "css,result" %}
+{% fiddle name=filter files=scss fiddle=bibixx/k8Lrxc2m resultsBg=#151515 %}
 
 Firstly we create wrapper for a gradient. Then we create `::before` and `::after`. These two will be the core of whole effect.
 
