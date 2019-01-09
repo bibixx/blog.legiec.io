@@ -3,15 +3,6 @@
     <h1 class="site-header__title">
       <a href="<%- url_for() %>" id="logo"><%= config.title %></a>
     </h1>
-    <div class="site-header__right">
-      <div class="site-header__btns">
-        <% if (theme.rss){ %>
-          <a class="site-header__btns__rss" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>">
-            <i class="material-icons">rss_feed</i>
-          </a>
-        <% } %>
-      </div>
-    </div>
     <nav class="site-header__left">
       <% for (var i in theme.menu){ %>
         <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
