@@ -7,3 +7,4 @@ public/
 public_dark/
 .deploy*/
 package-lock.json
+_multiconfig.yml
