@@ -1,0 +1,85 @@
+title: Bartek Legięć
+subtitle: null
+description: null
+keywords: null
+author: Bartek Legięć
+language: null
+timezone: null
+url: 'https://blog.legiec.io'
+root: /
+permalink: ':year/:month/:day/:title/'
+permalink_defaults: null
+source_dir: source
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: snippets
+i18n_dir: ':lang'
+skip_render: null
+exclude: source/snippets
+new_post_name: ':title.md'
+default_layout: post
+titlecase: false
+external_link: true
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: false
+disqus_shortname: legiec-io
+index_generator:
+  path: ''
+  per_page: 5
+  order_by: '-date'
+default_category: uncategorized
+category_map: null
+tag_map: null
+date_format: D MMMM YYYY
+time_format: 'HH:mm:ss'
+per_page: 10
+pagination_dir: page
+theme: bartoszlegiec
+deploy:
+  type: null
+node_sass:
+  outputStyle: nested
+  precision: 5
+  sourceComments: falsefcc
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+  awl: 4
+  wpm: 200
+  suffix: minutes
+prism_plugin:
+  mode: preprocess
+  theme: false
+  custom_css: css/prism-custom.css
+  line_number: true
+githubEmojis:
+  enable: true
+  className: github-emoji
+  unicode: true
+  styles: null
+  localEmojis: null
+google_analytics: UA-120447939-1
+codepen:
+  username: bibixx
+  height: 500
+  theme: '33713'
+img_optimization:
+  jpg:
+    enabled: true
+    params: '-resize 1920x1080^'
+  png:
+    enabled: true
+    params: '-resize 1920x1080^'
+  jpeg:
+    enabled: true
+    params: '-resize 1920x1080^'
+  default_thumb: '-resize 800x450^ -quality 85'
+public_dir: public_dark

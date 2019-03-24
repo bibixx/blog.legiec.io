@@ -13,7 +13,7 @@
     text-align: justify
 
     &#{$r}--scrolled
-      background-color: #fff
+      background-color: var(--background-color)
       
       #{$r}__body
         opacity: 1
@@ -26,7 +26,7 @@
       padding-top: 0
 
       &
-        background-color: #fff
+        background-color: var(--background-color)
 
         #{$r}__body
           opacity: 1
@@ -48,14 +48,14 @@
     line-height: 1.3
     padding: 8px 0
     font-size: 2.5em
-    background: $body-color
+    background: var(--background-color)
     box-decoration-break: clone
     -webkit-box-decoration-break: clone
     border-radius: 2px
 
     +sm-down
       line-height: 1.3
-  
+
 .article-title-image
   display: flex
   justify-content: space-between

@@ -1,5 +1,5 @@
 <%- partial('_partial/head') %>
-<body>
+<body <% if (config.is_dark) {%> class="dark" <% } %>>
   <div id="container">
     <div class="wrap<% if (page.__post){ %> wrap--post<% } %>">
       <%- partial('_partial/header', null, {cache: !config.relative_link}) %>

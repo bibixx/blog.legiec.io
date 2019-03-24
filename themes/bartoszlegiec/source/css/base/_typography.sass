@@ -1,6 +1,6 @@
 body
   font-family: "Noto Serif", Georgia, 'Times New Roman', Times, serif
-  color: rgba(0,0,0,.84)
+  color: var(--text-color)
   font-weight: 400
   
 \:root
@@ -22,8 +22,8 @@ mark
   background-color: transparentize($mark-color, .75)
 
 *::selection
-  background: rgba(0,0,0,0.75)
-  color: #fff
+  background: var(--selection-background)
+  color: var(--selection-color)
 
 code:not([class*="language-"])
   background: #1c2128
@@ -36,7 +36,7 @@ code:not([class*="language-"])
     background: #282A2B
 
 blockquote
-  border-left: 0.3125em solid #141414
+  border-left: 0.3125em solid var(--blockquote-color)
   margin: 0
   padding: 0 1em
   font-style: italic
@@ -47,6 +47,7 @@ blockquote
 
 h1, h2, h3, h4
   font-family: "Montserrat", "Noto Serif", Georgia, 'Times New Roman', Times, sans-serif
+  color: var(--article-header)
   line-height: 1.2
   font-weight: 800
   text-align: left
