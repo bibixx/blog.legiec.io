@@ -12,14 +12,14 @@ body
 a
   position: relative
   text-decoration: none
-  color: $link-color
+  color: var(--link-color)
   +a-underline
 
 p
   line-height: 1.58
 
 mark
-  background-color: transparentize($mark-color, .75)
+  background-color: var(--footer-color)
 
 *::selection
   background: var(--selection-background)
@@ -51,3 +51,7 @@ h1, h2, h3, h4
   line-height: 1.2
   font-weight: 800
   text-align: left
+
+strong
+  font-weight: 700
+  color: var(--article-header)

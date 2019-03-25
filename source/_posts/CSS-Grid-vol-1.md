@@ -8,7 +8,7 @@ category:
 snippets: 'CSS-Grid-vol-1'
 ---
 
-While I was creating theme for this blog I thought that I'd use CSS Grid Layout. Maybe not for the first time but certainly for the first time in a bigger project. Previously when I was supposed to create a website I wouldn't use it since I knew had to care about supporting something more than just newest browsers so grid would automatically be out of reach.
+While I was **creating theme** for this blog I thought that I'd use CSS Grid Layout. Maybe not for the first time but certainly for the first time in a bigger project. Previously when I was supposed to create a website I wouldn't use it since I knew had to care about supporting something more than just newest browsers so grid would automatically be out of reach.
 
 <!-- more -->
 

@@ -34,30 +34,6 @@
     testForScroll();
   }
 
-  const isDescendant = (parent, child) => {
-    var node = child.parentNode;
-    while (node != null) {
-        if (node == parent) {
-            return true;
-        }
-        node = node.parentNode;
-    }
-    return false;
-  }
-
-  const menuOpenClass = "mobile-menu--open";
-  const $menuButton = $(".site-header__hamburger");
-  const $menuContainer = $(".mobile-menu");
-  const $menuBg = $(".mobile-menu__bg");
-
-  $menuBg.addEventListener("click", () => {
-    $menuContainer.classList.remove(menuOpenClass);
-  });
-
-  $menuButton.addEventListener("click", () => {
-    $menuContainer.classList.add(menuOpenClass);
-  });
-
   Prism.hooks.add('complete', function(env) {
     document.querySelectorAll("pre.language-css").forEach(($el) => {
       $el.querySelectorAll(".token.property").forEach($var => {
@@ -74,5 +50,31 @@
         }
       });
     });
+  });
+
+  const setCookie = (name, value, days) => {
+    let expires = "";
+    if (days) {
+      const date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 *1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+  }
+
+  if (document.cookie.split(';').filter((item) => item.includes('darkmode=true')).length > 0) {
+    document.body.classList.add("dark");
+  }
+
+  $(".dark-mode-button").addEventListener("click", () => {
+    const $body = document.body;
+    $body.classList.toggle("dark");
+
+    if ($body.classList.contains("dark")) {
+      setCookie("darkmode", "true", 365);
+    } else {
+      setCookie("darkmode", "true", -1);
+    }
   });
 })();

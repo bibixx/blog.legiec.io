@@ -1,20 +1,28 @@
-$background-color: #fff
-$link-color: #2962FF
-$mark-color: $link-color
-$code-background: $link-color
+$main-color: #2962FF
 
 body
   --background-color: #fff
   --text-color: rgba(0, 0, 0, 0.84)
+  --text-light: rgba(0, 0, 0, 0.5)
   --article-header: var(--text-color)
   --blockquote-color: #141414
   --selection-background: rgba(0,0,0,0.75)
   --selection-color: #fff
+  --link-color: #2962FF
+  --navbar-background: #{$main-color}
+  --navbar-color: #fff
+  --footer-color: #{transparentize($main-color, 0.9)}
 
 body.dark
   --background-color: #111
   --text-color: rgba(255, 255, 255, 0.75)
+  --text-light: rgba(255, 255, 255, 0.5)
   --article-header: #fff
   --blockquote-color: rgba(255, 255, 255, 0.5)
   --selection-background: rgba(255, 255, 255, 0.5)
   --selection-color: #111
+  --link-color: #2962FF
+  --navbar-background: #002070
+  --navbar-color: #fff
+  --footer-color: rgba(0, 68, 255, 0.15)
+

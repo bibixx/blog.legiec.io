@@ -1,18 +1,27 @@
 <header id="header" class="site-header">
   <div class="site-header__menu">
+    <% /* %>
     <nav class="site-header__left">
       <% for (var i in theme.menu){ %>
         <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
       <% } %>
     </nav>
+    <% */ %>
 
     <h1 class="site-header__title">
       <a href="<%- url_for() %>" id="logo"><%= config.title %></a>
     </h1>
+    </nav>
 
+    <div class="site-header__right">
+      <button class="dark-mode-button material-icons"></button>
+    </div>
+
+    <% /* %>
     <button class="site-header__hamburger">
-      <i class="material-icons">menu</i>
+    <i class="material-icons">menu</i>
     </button>
+    <% */ %>
   </div>
 </header>
 

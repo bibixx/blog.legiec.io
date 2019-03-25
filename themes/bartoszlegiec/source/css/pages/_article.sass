@@ -1,5 +1,11 @@
 .article
   $r: &
+
+  img
+    opacity: 0.66
+
+    &:hover
+      opacity: 1
   
   &--full
     +container
@@ -49,6 +55,7 @@
     padding: 8px 0
     font-size: 2.5em
     background: var(--background-color)
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out
     box-decoration-break: clone
     -webkit-box-decoration-break: clone
     border-radius: 2px
@@ -107,7 +114,7 @@
         right: -4px
 
 #article-nav
-  background: transparentize($link-color, .9)
+  background: var(--footer-color)
 
   h2
     +container
