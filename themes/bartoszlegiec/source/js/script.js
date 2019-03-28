@@ -63,6 +63,12 @@
     document.cookie = name + "=" + (value || "")  + expires + "; path=/";
   }
 
+  if (window.matchMedia('(prefers-color-scheme: dark)')) {
+    document.body.classList.add("dark");
+    document.body.classList.add("dark-no-anim");
+    setCookie("darkmode", "true", 365);
+  }
+
   if (document.cookie.split(';').filter((item) => item.includes('darkmode=true')).length > 0) {
     document.body.classList.add("dark");
   }
