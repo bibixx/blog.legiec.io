@@ -22,7 +22,6 @@ permalink_defaults:
 source_dir: source
 public_dir: public
 tag_dir: tags
-archive_dir: archives
 category_dir: categories
 code_dir: snippets
 i18n_dir: :lang

@@ -1,6 +1,6 @@
 FROM node:dubnium-alpine AS build
 
-RUN apk update && apk add yarn python g++ make imagemagick && rm -rf /var/cache/apk/*
+RUN apk update && apk add yarn imagemagick && rm -rf /var/cache/apk/*
 RUN npm config set scripts-prepend-node-path true
 
 WORKDIR /app

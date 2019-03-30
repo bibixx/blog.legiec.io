@@ -1,7 +1,6 @@
 # Header
 menu:
   Home: /
-  Archives: /archives
 rss: /atom.xml
 
 # Content
@@ -13,7 +12,7 @@ widgets:
 - category
 # - tag
 # - tagcloud
-- archive
+# - archive
 # - recent_posts
 
 # display widgets at the bottom of index pages (pagination == 2)
@@ -23,7 +22,7 @@ index_widgets:
 # - archive
 
 # widget behavior
-archive_type: 'monthly'
+# archive_type: 'monthly'
 show_count: false
 
 # Miscellaneous
