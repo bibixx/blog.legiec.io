@@ -19,6 +19,8 @@
     grid-template-columns: 1fr repeat(3, calc(75vw / 3)) 1fr
     grid-template-areas: "start left logo right end"
     width: 100%
+    height: 2rem
+    align-items: center
 
     +md-down
       grid-template-columns: 1fr repeat(3, calc(90vw / 3)) 1fr
@@ -150,6 +152,9 @@
   color: var(--navbar-color)
   border: 0
   cursor: pointer
+  height: 2rem
+  width: 2rem
+  overflow: hidden
 
   &::after
     display: block
