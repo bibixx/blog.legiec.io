@@ -2,7 +2,7 @@
 <body>
   <%- js('js/darkmode') %>
 
-  <div id="container">
+  <div class="container">
     <div class="wrap<% if (page.__post){ %> wrap--post<% } %>">
       <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
       <section id="main"><%- body %></section>
