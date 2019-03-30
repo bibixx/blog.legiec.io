@@ -21,7 +21,7 @@ RUN yarn img
 RUN mkdir /www
 RUN rsync -a /app/public_dark/* /www/public_dark/ --exclude 'static/' --exclude 'css/' --exclude 'js/' --exclude 'snippets/'
 
-FROM nginx:1.14-alpine
+FROM nginx:1-alpine
 COPY --from=build /app/public /var/www/public
 COPY --from=build /www/public_dark/ /var/www/public_dark
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
