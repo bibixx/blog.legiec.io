@@ -9,6 +9,7 @@
     "start": "hexo server",
     "server": "hexo server",
     "build": "hexo clean && NODE_ENV=production hexo generate && hexo img",
+    "now-build": "yarn build",
     "generate": "hexo generate",
     "hexo": "hexo",
     "new": "hexo new",
