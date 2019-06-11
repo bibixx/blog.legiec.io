@@ -39,7 +39,7 @@ relative_link: false
 future: true
 highlight:
   enable: false
-  
+
 disqus_shortname: legiec-io
 
 # Home page setting
@@ -50,7 +50,7 @@ index_generator:
   path: ''
   per_page: 5
   order_by: -date
-  
+
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -111,15 +111,3 @@ codepen:
   username: "bibixx"
   height: 500
   theme: "33713"
-
-img_optimization:
-  jpg:
-    enabled: true
-    params: -resize 1920x1080^
-  png:
-    enabled: true
-    params: -resize 1920x1080^
-  jpeg:
-    enabled: true
-    params: -resize 1920x1080^
-  default_thumb: -resize 800x450^ -quality 85
